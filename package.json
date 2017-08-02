@@ -1,0 +1,17 @@
+{
+  "name": "songle-sync-client-webmo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webmo.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "@types/node": "^4.2.11",
+    "webmo-client-nodejs": "^0.2.2",
+    "websocket": "^1.0.24"
+  }
+}
