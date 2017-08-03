@@ -11,6 +11,7 @@
   "devDependencies": {},
   "dependencies": {
     "@types/node": "^4.2.11",
+    "songle-widget": "^1.0.0",
     "webmo-client-nodejs": "^0.2.2",
     "websocket": "^1.0.24"
   }

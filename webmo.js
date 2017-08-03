@@ -1,6 +1,6 @@
 // ローカルホストのWebmoに接続
 var WebmoWs = require("webmo-client-nodejs").ws;
-var motor = new WebmoWs("127.0.0.1");
+var motor = new WebmoWs("webmo.local");
 motor.onopen = onMotorConnected;
 // motor.onmessage = (json) => console.log(json);
 var SongleWidget = require("songle-widget");
