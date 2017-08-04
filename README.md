@@ -9,7 +9,7 @@
 
 ## 使い方
 
-アクセストークンを[settings.js](https://github.com/SongleJp/songle-sync-app-pi/blob/master/settings.js) に設定します。
+アクセストークンを[settings.js](https://github.com/SongleJp/songle-sync-app-webmo/blob/master/settings.js) に設定します。
 
 WebmoのWiFiに接続した状態で、以下のようにして実行してください。 `npm install` は最初の一度だけ必要です。
 
