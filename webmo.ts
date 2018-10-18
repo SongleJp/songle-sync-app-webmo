@@ -4,27 +4,27 @@ var motor = new WebmoWs("webmo.local");
 motor.onopen = onMotorConnected;
 // motor.onmessage = (json) => console.log(json);
 
-var SongleWidget = require("songle-widget");
+var Songle = require("songle-api");
 
 // トークンの情報を取ってくる
 var settings = require("./settings");
 
-// Songle Widget IoMT APIのエンドポイント指定
-SongleWidget.System.defaultEndpointWebClientProtocol = "https:";
-SongleWidget.System.defaultEndpointWebClientHost = "api.songle.jp";
-SongleWidget.System.defaultEndpointWebSocketProtocol = "https:";
-SongleWidget.System.defaultEndpointWebSocketHost = "api.songle.jp";
-SongleWidget.System.showLogMode = true;
+// Songle IoMT APIのエンドポイント指定
+Songle.System.defaultEndpointWebClientProtocol = "https:";
+Songle.System.defaultEndpointWebClientHost = "api.songle.jp";
+Songle.System.defaultEndpointWebSocketProtocol = "https:";
+Songle.System.defaultEndpointWebSocketHost = "api.songle.jp";
+Songle.System.showLogMode = true;
 
 // ビート情報と基本情報をもらってくる
-var player = new SongleWidget.Player({
+var player = new Songle.Player({
     accessToken: settings.tokens.access
 });
-player.addPlugin(new SongleWidget.Plugin.Beat());
-// player.addPlugin(new SongleWidget.Plugin.Chord());
-// player.addPlugin(new SongleWidget.Plugin.Melody());
-player.addPlugin(new SongleWidget.Plugin.Chorus());
-player.addPlugin(new SongleWidget.Plugin.SongleSync());
+player.addPlugin(new Songle.Plugin.Beat());
+// player.addPlugin(new Songle.Plugin.Chord());
+// player.addPlugin(new Songle.Plugin.Melody());
+player.addPlugin(new Songle.Plugin.Chorus());
+player.addPlugin(new Songle.Plugin.SongleSync());
 
 var initialized = false;
 function onMotorConnected() {
